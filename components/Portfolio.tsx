@@ -40,21 +40,26 @@ const PortfolioCard: React.FC<{ item: PortfolioItem }> = ({ item }) => {
         <div className="group relative overflow-hidden rounded-lg shadow-lg">
             {/* Image and Carousel Container */}
             <div className="relative w-full h-full">
-                <img src={item.imageUrls[currentIndex]} alt={item.title} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
+                <img 
+                    src={item.imageUrls[currentIndex]} 
+                    alt={item.title} 
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" 
+                    loading="lazy"
+                />
             </div>
 
             {/* Navigation Arrows */}
             <button
                 aria-label="Previous image"
                 onClick={goToPrevious}
-                className="absolute top-1/2 left-2 -translate-y-1/2 z-20 bg-black/30 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-black/50 focus:outline-none focus:ring-2 focus:ring-sky-400"
+                className="absolute top-1/2 left-2 -translate-y-1/2 z-20 bg-black/30 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-black/50 focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
                 <ChevronLeftIcon />
             </button>
             <button
                 aria-label="Next image"
                 onClick={goToNext}
-                className="absolute top-1/2 right-2 -translate-y-1/2 z-20 bg-black/30 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-black/50 focus:outline-none focus:ring-2 focus:ring-sky-400"
+                className="absolute top-1/2 right-2 -translate-y-1/2 z-20 bg-black/30 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-black/50 focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
                 <ChevronRightIcon />
             </button>
@@ -66,7 +71,7 @@ const PortfolioCard: React.FC<{ item: PortfolioItem }> = ({ item }) => {
                         key={slideIndex}
                         aria-label={`Go to image ${slideIndex + 1}`}
                         onClick={() => goToSlide(slideIndex)}
-                        className={`h-2 w-2 rounded-full transition-colors duration-300 ${currentIndex === slideIndex ? 'bg-sky-400' : 'bg-white/50 hover:bg-white/80'
+                        className={`h-2 w-2 rounded-full transition-colors duration-300 ${currentIndex === slideIndex ? 'bg-blue-500' : 'bg-white/50 hover:bg-white/80'
                             }`}
                     />
                 ))}
@@ -75,7 +80,7 @@ const PortfolioCard: React.FC<{ item: PortfolioItem }> = ({ item }) => {
             {/* Content Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-500 pointer-events-none"></div>
             <div className="absolute inset-0 p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 pointer-events-none">
-                <span className="text-sm font-semibold bg-sky-500 text-white py-1 px-3 rounded-full self-start mb-2">{item.category}</span>
+                <span className="text-sm font-semibold bg-blue-500 text-white py-1 px-3 rounded-full self-start mb-2">{item.category}</span>
                 <h3 className="text-xl font-bold text-white">{item.title}</h3>
             </div>
         </div>
@@ -84,11 +89,11 @@ const PortfolioCard: React.FC<{ item: PortfolioItem }> = ({ item }) => {
 
 const Portfolio: React.FC = () => {
     return (
-        <section id="portfolio" className="py-20 bg-slate-800">
+        <section id="portfolio" className="py-20 bg-zinc-950">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-12">
                     <h2 className="text-4xl font-bold text-white">Portofolio Hasil Cetak Kami</h2>
-                    <p className="text-lg text-gray-400 mt-2 max-w-2xl mx-auto">
+                    <p className="text-lg text-zinc-400 mt-2 max-w-2xl mx-auto">
                         Lihat beberapa karya terbaik yang telah kami produksi untuk klien kami.
                     </p>
                 </div>

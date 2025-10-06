@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { CONTACT_INFO } from '../constants';
 
@@ -14,44 +13,52 @@ const EmailIcon: React.FC<{ className?: string }> = ({ className }) => (
     <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
 );
 
+const LocationIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+);
+
 
 const Footer: React.FC = () => {
   return (
-    <footer id="contact" className="bg-slate-900 border-t border-slate-800">
+    <footer id="contact" className="bg-zinc-950 border-t border-zinc-800">
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-bold text-white tracking-wider mb-4">
-              Rafaela<span className="text-sky-400">Print</span>
+              Rafaela<span className="text-blue-500">Print</span>
             </h3>
-            <p className="text-gray-400">
-              Solusi cetak digital modern, cepat, dan terpercaya untuk semua kebutuhan Anda.
+            <p className="text-zinc-400">
+              Solusi cetak digital modern, cepat, dan terpercaya untuk semua kebutuhan Anda di Semarang.
             </p>
           </div>
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Informasi Kontak</h4>
-            <ul className="space-y-3 text-gray-400">
-              <li className="flex items-center gap-3">
-                <WhatsAppIcon className="w-5 h-5 text-sky-400" />
-                <a href={CONTACT_INFO.whatsappLink} className="hover:text-sky-400 transition">{CONTACT_INFO.whatsapp}</a>
+            <ul className="space-y-3 text-zinc-400">
+              <li className="flex items-start gap-3">
+                <LocationIcon className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
+                <span>{CONTACT_INFO.address}</span>
               </li>
               <li className="flex items-center gap-3">
-                <InstagramIcon className="w-5 h-5 text-sky-400" />
-                <a href={CONTACT_INFO.instagramLink} className="hover:text-sky-400 transition">{CONTACT_INFO.instagram}</a>
+                <WhatsAppIcon className="w-5 h-5 text-blue-500" />
+                <a href={CONTACT_INFO.whatsappLink} className="hover:text-blue-500 transition">{CONTACT_INFO.whatsapp}</a>
               </li>
               <li className="flex items-center gap-3">
-                <EmailIcon className="w-5 h-5 text-sky-400" />
-                <a href={CONTACT_INFO.emailLink} className="hover:text-sky-400 transition break-all">{CONTACT_INFO.email}</a>
+                <InstagramIcon className="w-5 h-5 text-blue-500" />
+                <a href={CONTACT_INFO.instagramLink} className="hover:text-blue-500 transition">{CONTACT_INFO.instagram}</a>
+              </li>
+              <li className="flex items-center gap-3">
+                <EmailIcon className="w-5 h-5 text-blue-500" />
+                <a href={CONTACT_INFO.emailLink} className="hover:text-blue-500 transition break-all">{CONTACT_INFO.email}</a>
               </li>
             </ul>
           </div>
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Jam Operasional</h4>
-            <p className="text-gray-400">Senin - Sabtu: 09:00 - 17:00</p>
-            <p className="text-gray-400">Minggu & Hari Libur: Tutup</p>
+            <p className="text-zinc-400">Senin - Sabtu: 09:00 - 17:00</p>
+            <p className="text-zinc-400">Minggu & Hari Libur: Tutup</p>
           </div>
         </div>
-        <div className="mt-12 pt-8 border-t border-slate-800 text-center text-gray-500">
+        <div className="mt-12 pt-8 border-t border-zinc-800 text-center text-zinc-500">
           <p>&copy; {new Date().getFullYear()} Rafaela Print. All Rights Reserved.</p>
         </div>
       </div>

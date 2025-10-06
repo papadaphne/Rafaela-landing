@@ -1,11 +1,12 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rafaela Print - Solusi Cetak Digital Anda</title>
+    <title>Cetak Undangan, Banner, & Nota di Semarang | Rafaela Print</title>
+    <meta name="description" content="Rafaela Print: Spesialis cetak undangan pernikahan, banner/spanduk, nota, dan brosur di Semarang. Kualitas terjamin, proses cepat, harga kompetitif. Melayani pengiriman ke seluruh Indonesia.">
+    <meta name="keywords" content="cetak undangan semarang, cetak banner semarang, cetak spanduk semarang, cetak nota semarang, cetak brosur semarang, percetakan semarang, digital printing semarang, rafaela print, percetakan online, cetak online, kirim seluruh indonesia">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +19,42 @@
       h1, h2, h3, h4, h5, h6 {
         font-family: 'Poppins', sans-serif;
       }
+      @keyframes whatsapp-pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+        }
+      }
+      .whatsapp-pulse {
+        animation: whatsapp-pulse 2s infinite;
+      }
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PrintingService",
+      "name": "Rafaela Print",
+      "description": "Rafaela Print adalah solusi digital printing di Semarang, spesialis cetak undangan pernikahan, banner/spanduk, nota, dan brosur dengan kualitas terbaik, proses cepat, dan harga kompetitif.",
+      "telephone": "+628979012852",
+      "email": "rafaela.digitalprint@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Kaumandowo, Kudu",
+        "addressLocality": "Kec. Genuk, Kota Semarang",
+        "addressRegion": "Jawa Tengah",
+        "postalCode": "50116",
+        "addressCountry": "ID"
+      },
+      "url": "https://maps.app.goo.gl/D2L1iR53mNq8s2jG7",
+      "openingHours": "Mo-Sa 09:00-17:00",
+      "image": "https://images.unsplash.com/photo-1568992688065-52092a83ab80?q=80&w=2070&auto=format&fit=crop&ixlib-rb-4.0.3"
+    }
+    </script>
   <script type="importmap">
 {
   "imports": {
@@ -30,7 +66,7 @@
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-  <body>
+  <body lang="id">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>

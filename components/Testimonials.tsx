@@ -11,27 +11,24 @@ const StarIcon: React.FC<{ className?: string }> = ({ className }) => (
 
 const Testimonials: React.FC = () => {
   return (
-    <section id="testimonials" className="py-20 bg-slate-800">
+    <section id="testimonials" className="py-20 bg-zinc-950">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white">Apa Kata Pelanggan Kami?</h2>
-          <p className="text-lg text-gray-400 mt-2 max-w-2xl mx-auto">
+          <p className="text-lg text-zinc-400 mt-2 max-w-2xl mx-auto">
             Kepuasan pelanggan adalah prioritas utama kami.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex overflow-x-auto space-x-8 pb-4 -mx-6 px-6">
           {TESTIMONIALS_DATA.map((testimonial, index) => (
-            <div key={index} className="bg-slate-900 p-8 rounded-xl shadow-lg flex flex-col">
+            <div key={index} className="bg-zinc-900 p-8 rounded-xl shadow-lg flex flex-col flex-shrink-0 w-80 md:w-96">
               <div className="flex mb-4">
                 {[...Array(5)].map((_, i) => <StarIcon key={i} className="w-5 h-5 text-amber-400" />)}
               </div>
-              <p className="text-gray-300 italic mb-6 flex-grow">"{testimonial.quote}"</p>
-              <div className="flex items-center">
-                <img src={testimonial.avatarUrl} alt={`Foto profil ${testimonial.name}, pelanggan Rafaela Print`} className="w-12 h-12 rounded-full mr-4" />
-                <div>
-                  <p className="font-bold text-white">{testimonial.name}</p>
-                  <p className="text-sm text-gray-400">{testimonial.role}</p>
-                </div>
+              <p className="text-zinc-300 italic mb-6 flex-grow">"{testimonial.quote}"</p>
+              <div className="mt-auto pt-4 border-t border-zinc-800/60">
+                <p className="font-bold text-white">{testimonial.name}</p>
+                <p className="text-sm text-zinc-400">{testimonial.role}</p>
               </div>
             </div>
           ))}

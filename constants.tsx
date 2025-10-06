@@ -16,6 +16,11 @@ const InvitationIcon: React.FC<{ className?: string }> = ({ className }) => (
         <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
     </svg>
 );
+const NotaIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.586a1 1 0 0 1 .707.293l5.414 5.414a1 1 0 0 1 .293.707V19a2 2 0 0 1-2 2Z" />
+    </svg>
+);
 const QualityIcon: React.FC<{ className?: string }> = ({ className }) => (
     <svg className={className} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
 );
@@ -28,6 +33,14 @@ const SpeedIcon: React.FC<{ className?: string }> = ({ className }) => (
 const ServiceIcon: React.FC<{ className?: string }> = ({ className }) => (
     <svg className={className} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
 );
+const ShippingIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path d="M9 17a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
+        <path d="M19 17a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13 17H6V6h10v4l4 4V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v11m3-3H6" />
+    </svg>
+);
+
 
 // Contact Info
 export const CONTACT_INFO = {
@@ -37,60 +50,66 @@ export const CONTACT_INFO = {
   instagramLink: 'https://instagram.com/rafaelaprint',
   email: 'rafaela.digitalprint@gmail.com',
   emailLink: 'mailto:rafaela.digitalprint@gmail.com',
+  address: 'Jl. Kaumandowo, Kudu, Kec. Genuk, Kota Semarang, Jawa Tengah 50116',
 };
 
 // Page Content
 export const SERVICES_DATA: Service[] = [
   {
-    icon: <PrintIcon className="w-12 h-12 text-sky-400" />,
-    title: 'Cetak Banner & Spanduk',
-    description: 'Cetak banner, spanduk, baliho, dan media promosi outdoor lainnya dengan bahan berkualitas dan warna tajam.',
-  },
-  {
-    icon: <InvitationIcon className="w-12 h-12 text-sky-400" />,
+    icon: <InvitationIcon className="w-12 h-12 text-blue-500" />,
     title: 'Desain & Cetak Undangan',
-    description: 'Cetak undangan pernikahan, ulang tahun, dan acara spesial lainnya dengan desain eksklusif dan bahan premium.',
+    description: 'Cetak undangan pernikahan, khitan, dan acara lainnya dengan desain custom eksklusif dan berbagai pilihan bahan premium.',
   },
   {
-    icon: <StickerIcon className="w-12 h-12 text-sky-400" />,
+    icon: <PrintIcon className="w-12 h-12 text-blue-500" />,
+    title: 'Cetak Banner & Spanduk MMT',
+    description: 'Cetak banner, spanduk, MMT, atau baliho untuk promosi dengan bahan flexi berkualitas, warna tajam, dan hasil tahan lama.',
+  },
+  {
+    icon: <NotaIcon className="w-12 h-12 text-blue-500" />,
+    title: 'Cetak Nota & Kwitansi NCR',
+    description: 'Cetak nota, surat jalan, invoice, atau kwitansi rangkap menggunakan kertas NCR (carbonless) untuk administrasi bisnis Anda.',
+  },
+  {
+    icon: <DesignIcon className="w-12 h-12 text-blue-500" />,
+    title: 'Cetak Brosur & Flyer',
+    description: 'Promosikan bisnis Anda dengan brosur dan flyer full color. Tersedia berbagai pilihan kertas dan ukuran untuk kebutuhan marketing.',
+  },
+  {
+    icon: <StickerIcon className="w-12 h-12 text-blue-500" />,
     title: 'Stiker Vinyl & Chromo',
-    description: 'Produksi stiker untuk branding, label kemasan, atau dekorasi dengan berbagai pilihan bahan dan finishing.',
+    description: 'Produksi stiker untuk branding, label kemasan, atau dekorasi dengan berbagai pilihan bahan dan finishing (cutting).',
   },
   {
-    icon: <DesignIcon className="w-12 h-12 text-sky-400" />,
-    title: 'Kartu Nama & Brosur',
-    description: 'Cetak kartu nama, brosur, flyer, dan materi marketing lainnya untuk menunjang citra profesional bisnis Anda.',
-  },
-  {
-    icon: <PrintIcon className="w-12 h-12 text-sky-400" />,
-    title: 'Cetak A3+ & Dokumen',
-    description: 'Cetak poster, menu, sertifikat, dan dokumen lainnya di kertas A3+ dengan cepat dan hasil memuaskan.',
-  },
-  {
-    icon: <DesignIcon className="w-12 h-12 text-sky-400" />,
-    title: 'Jasa Desain Grafis',
-    description: 'Butuh bantuan desain? Tim kami siap membantu mewujudkan konsep visual Anda menjadi desain yang menarik.',
+    icon: <PrintIcon className="w-12 h-12 text-blue-500" />,
+    title: 'Cetak A3+ & Kartu Nama',
+    description: 'Cetak poster, menu, sertifikat, dan kartu nama di kertas A3+ dengan cepat dan hasil memuaskan.',
   },
 ];
 
 export const FEATURES_DATA: Feature[] = [
     {
-      icon: <QualityIcon className="w-10 h-10 text-sky-400" />,
+      icon: <QualityIcon className="w-10 h-10 text-blue-500" />,
       title: 'Kualitas Cetak Terbaik',
       description: 'Kami menggunakan mesin cetak modern dan tinta premium untuk memastikan hasil cetak yang tajam dan tahan lama.',
     },
     {
-      icon: <PriceIcon className="w-10 h-10 text-sky-400" />,
+      icon: <PriceIcon className="w-10 h-10 text-blue-500" />,
       title: 'Harga Kompetitif',
       description: 'Dapatkan penawaran harga terbaik tanpa mengorbankan kualitas. Solusi cetak hemat untuk semua kebutuhan.',
     },
     {
-      icon: <SpeedIcon className="w-10 h-10 text-sky-400" />,
+      icon: <SpeedIcon className="w-10 h-10 text-blue-500" />,
       title: 'Proses Cepat & Tepat Waktu',
       description: 'Kami menghargai waktu Anda. Proses produksi yang efisien memastikan pesanan Anda selesai sesuai jadwal.',
     },
+     {
+      icon: <ShippingIcon className="w-10 h-10 text-blue-500" />,
+      title: 'Jangkauan Nasional',
+      description: 'Meskipun berbasis di Semarang, kami siap mengirimkan pesanan Anda ke seluruh penjuru Indonesia dengan aman.',
+    },
     {
-      icon: <ServiceIcon className="w-10 h-10 text-sky-400" />,
+      icon: <ServiceIcon className="w-10 h-10 text-blue-500" />,
       title: 'Pelayanan Ramah & Profesional',
       description: 'Tim kami siap membantu Anda mulai dari konsultasi, desain, hingga proses cetak dengan pelayanan terbaik.',
     },
@@ -108,21 +127,53 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
 
 export const TESTIMONIALS_DATA: Testimonial[] = [
     {
-        quote: "Hasil cetak bannernya luar biasa! Warnanya tajam dan bahannya tebal. Pelayanannya juga cepat dan ramah. Sangat direkomendasikan!",
-        name: "Andi Wijaya",
-        role: "Pemilik Coffee Shop",
-        avatarUrl: "https://randomuser.me/api/portraits/men/32.jpg"
+        quote: "Cetak banner MMT di sini sat set banget. Sore pesan, besok pagi udah jadi. Warnanya juga pas, nggak pudar. Mantap pokoknya!",
+        name: "Joko Susilo",
+        role: "Pemilik Warung Makan",
     },
     {
-        quote: "Saya pesan stiker label untuk produk saya, hasilnya rapi banget dan cuttingnya presisi. Harganya juga terjangkau untuk UKM seperti saya. Pasti order lagi.",
-        name: "Siti Aminah",
-        role: "Pengusaha Makanan Ringan",
-        avatarUrl: "https://randomuser.me/api/portraits/women/44.jpg"
+        quote: "Undangan nikahanku jadi cantik banget! Desainnya dibantu sampai pas di hati. Mbaknya sabar banget ngadepin revisianku. Makasih ya!",
+        name: "Rina & Doni",
+        role: "Pasangan Pengantin",
     },
     {
-        quote: "Butuh kartu nama mendadak dan Rafaela Print jadi penyelamat. Desainnya dibantu, prosesnya cepat, dan hasilnya elegan. Terima kasih banyak!",
-        name: "Budi Santoso",
-        role: "Freelance Consultant",
-        avatarUrl: "https://randomuser.me/api/portraits/men/36.jpg"
+        quote: "Langganan cetak nota NCR buat toko di sini. Kualitas kertasnya bagus, rangkapannya jelas. Harganya juga paling oke se-Semarang.",
+        name: "Herawati",
+        role: "Pemilik Toko Kelontong",
+    },
+    {
+        quote: "Stiker buat brand olshop-ku hasilnya top. Cutting-nya rapi, bahannya juga anti air. Next order lagi pasti.",
+        name: "Anisa Putri",
+        role: "Mahasiswi & Online Seller",
+    },
+    {
+        quote: "Butuh kartu nama express buat meeting, sehari langsung jadi. Desainnya elegan, kertasnya tebal. Profesional banget.",
+        name: "David Kurniawan",
+        role: "Marketing Executive",
+    },
+    {
+        quote: "Cetak brosur buat promo, warnanya cerah dan detailnya tajam. Bikin brosurku keliatan mahal padahal harganya terjangkau.",
+        name: "Kevin",
+        role: "Koordinator Event",
+    },
+    {
+        quote: "Spanduk buat acara 17-an RT kami hasilnya memuaskan. Kuat dan warnanya nggak luntur kena hujan. Warga semua suka.",
+        name: "Sugiarto",
+        role: "Ketua RT 05",
+    },
+    {
+        quote: "Ngeprint poster A3+ buat tugas kuliah di sini hasilnya jernih. Pelayanannya cepat, cocok buat mahasiswa yang kejar deadline.",
+        name: "Farhan",
+        role: "Mahasiswa DKV",
+    },
+    {
+        quote: "Pesan undangan khitanan anakku, desainnya lucu-lucu dan bisa custom. Prosesnya gampang dan nggak ribet.",
+        name: "Fitriani",
+        role: "Ibu Rumah Tangga",
+    },
+    {
+        quote: "Pelayanannya juara! Ramah dan solutif. Apapun kebutuhan cetakku, dari stiker sampai banner, selalu ke Rafaela Print.",
+        name: "Agung Nugroho",
+        role: "Freelancer",
     }
 ];
